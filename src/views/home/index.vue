@@ -23,7 +23,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /* background: rgb(15, 15, 15); */
+  background: rgb(15, 15, 15);
 }
 .game-home {
   width: 100%;

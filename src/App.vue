@@ -1,19 +1,14 @@
 <template>
   <div>
-    <div>{{test}}</div>
+    <div>child1</div>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import _ from 'lodash'
-const ary = [3,4,5]
-const test = _.head(ary)
 export default {
   data () {
-    return {
-      test: test
-    }
+    return {}
   }
 }
 </script>

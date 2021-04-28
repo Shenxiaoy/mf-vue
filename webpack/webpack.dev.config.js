@@ -11,29 +11,38 @@ const devServerConfig = {
     host: 'localhost',
     before: mockApis
 }
+console.log('ggggg')
 const devConfig = merge(baseConfig, {
     mode: 'development',
     devtool: 'inline-source-map',
     plugins: [
-        // new ModuleFederationPlugin({
-        //     filename: 'commont.js',
-        //     name: 'bsadmin',
-        //     library: { type: 'var', name: 'bsadmin' },
-        //     exposes: {
-        //         './commont': path.resolve(__dirname, './config/exposes.js')
-        //     },
-        //     shared: {
-        //         vue: {
-        //             singleton: true
-        //         }
-        //     }
-        // })
+        new ModuleFederationPlugin({
+            name: 'child2',
+            remotes: {
+                mainSdk: 'bsadmin@http://localhost:8080/commont.js',
+                // mainSdk: 'bsadmin@../public/test.js',
+            },
+            exposes: {
+
+            },
+            shared: {
+                vue: {
+                    singleton: true,
+                    shareKey: 'vue',
+                    shareScope: 'shop',
+                },
+                // lodash: {
+                //     singleton: true,
+                //     import: false
+                // }
+            }
+        })
     ]
 })
 WebpackDevServer.addDevServerEntrypoints(devConfig, devServerConfig)
 
 const compiler = webpack(devConfig)
 const server = new WebpackDevServer(compiler, devServerConfig)
-server.listen(8080, function() {
-    console.log('browser open in http://www.localhost:8080')
+server.listen(8082, function() {
+    console.log('browser open in http://www.localhost:8082')
 })

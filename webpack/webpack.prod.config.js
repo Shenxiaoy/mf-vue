@@ -9,19 +9,24 @@ const prodConfig = merge(baseConfig, {
     mode: 'production',
     plugins: [
         new CleanWebpackPlugin(),
-        // new ModuleFederationPlugin({
-        //     filename: 'commont.js',
-        //     name: 'bsadmin',
-        //     library: { type: 'var', name: 'bsadmin' },
-        //     exposes: {
-        //         './commont': path.resolve(__dirname, './config/exposes.js')
-        //     },
-        //     shared: {
-        //         vue: {
-        //             singleton: true
-        //         }
-        //     }
-        // })
+        new ModuleFederationPlugin({
+            name: 'child2',
+            // library: { type: 'var', name: 'stockt' },
+            remotes: {
+                mainSdk: 'bsadmin@http://localhost:8080/commont.js',
+                // mainSdk: 'bsadmin@[window.bsadmin]/commont.js',
+            },
+            exposes: {},
+            shared: {
+                vue: {
+                    singleton: true
+                },
+                // lodash: {
+                //     singleton: true,
+                //     import: false
+                // }
+            }
+        })
     ]
 })
 

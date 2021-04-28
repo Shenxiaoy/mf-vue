@@ -669,7 +669,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.12.13"
 
-"@babel/plugin-transform-runtime@^7.12.10":
+"@babel/plugin-transform-runtime@^7.12.1":
   version "7.13.15"
   resolved "https://registry.nlark.com/@babel/plugin-transform-runtime/download/@babel/plugin-transform-runtime-7.13.15.tgz?cache=0&sync_timestamp=1618846915864&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fplugin-transform-runtime%2Fdownload%2F%40babel%2Fplugin-transform-runtime-7.13.15.tgz#2eddf585dd066b84102517e10a577f24f76a9cd7"
   integrity sha1-Lt31hd0Ga4QQJRfhCld/JPdqnNc=
@@ -5386,7 +5386,7 @@ resolve@^1.10.0, resolve@^1.10.1, resolve@^1.12.0, resolve@^1.13.1, resolve@^1.1
 
 ret@~0.1.10:
   version "0.1.15"
-  resolved "https://registry.nlark.com/ret/download/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
+  resolved "https://registry.npm.taobao.org/ret/download/ret-0.1.15.tgz?cache=0&sync_timestamp=1613002640681&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fret%2Fdownload%2Fret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha1-uKSCXVvbH8P29Twrwz+BOIaBx7w=
 
 retry@^0.12.0:

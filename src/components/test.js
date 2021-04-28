@@ -1,10 +1,8 @@
-// import renderDom from '../router/renderVueRouter'
-// import addRoutes from '../router/addRoutes'
-// import routers from '../router/exportRouters'
-console.log('5555')
+
+const abRouter1 = {
+  vueRouter1: 'vueRouter',
+  jsDomRouter2: 'jsDomRouter'
+}
 export default {
-    // renderDom,
-    // addRoutes,
-    // routers
-    a: 'ssss'
+  abRouter1
 }
