@@ -16,7 +16,11 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: isDeveopment ? 'app.js' : 'ert[hash:8].app.js'
+        filename: isDeveopment ? 'app.js' : 'ert[hash:8].app.js',
+        library: {
+            name: 'webpackchild2',
+            type: 'umd'
+        }
     },
     module: {
         rules: [

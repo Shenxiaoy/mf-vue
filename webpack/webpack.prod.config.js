@@ -27,7 +27,12 @@ const prodConfig = merge(baseConfig, {
                 // }
             }
         })
-    ]
+    ],
+    // optimization: {
+    //     minimizer: [
+
+    //     ]
+    // }
 })
 
 module.exports = prodConfig

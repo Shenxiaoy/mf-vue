@@ -28,8 +28,6 @@ const devConfig = merge(baseConfig, {
             shared: {
                 vue: {
                     singleton: true,
-                    shareKey: 'vue',
-                    shareScope: 'shop',
                 },
                 // lodash: {
                 //     singleton: true,

@@ -19,6 +19,7 @@ export function structureApp(exposes, routes) {
     if (isdev) {
         mountDom(routes)
     } else {
+
         addChildRoutes(routes)
     }
 }

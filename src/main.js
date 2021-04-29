@@ -8,4 +8,5 @@ import { loadMain, structureApp } from './utils/mfInit'
     const mainSdk = await loadMain()
     const moduleContent = mainSdk.default
     structureApp(moduleContent, routes)
+    console.log('333')
 })()
