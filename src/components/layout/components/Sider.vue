@@ -58,12 +58,14 @@ export default {
   computed: {
     menuItems() {
       let menu = [];
-      if (this.$store) {
-        menu = filterRoutes(this.$store.state.menus);
-      } else {
-        menu = filterRoutes(this.$router.options.routes);
-      }
-      console.log(menu, 'ggggg')
+      console.log(this.$router.getRoutes(),this.$store.state.menus,'1111111')
+      const curRoutes = this.$router.getRoutes()
+      menu = filterRoutes(curRoutes)
+      // if (this.$store) {
+      //   menu = filterRoutes(this.$store.state.menus);
+      // } else {
+      //   menu = filterRoutes(this.$router.options.routes);
+      // }
       return menu;
     },
     selectedKeys() {
