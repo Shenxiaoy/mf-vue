@@ -1,5 +1,5 @@
 <template>
-  <div class="system-obj">商品---shop133
+  <div class="system-obj">商品---shop
     <p>{{tss}}</p>
     <p>{{sharelodash}}</p>
     <a-button>ssss</a-button>

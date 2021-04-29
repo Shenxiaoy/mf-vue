@@ -1,7 +1,7 @@
 import config from '../../webpack/config'
 
-const { mf: { mainScope: { scope, module: { commont } } } } = config.buildConfig
-const isdev = process.env.NODE_ENV === 'development'
+const { mf: { mainScope: { url, scope, module: { commont } } } } = config.buildConfig
+export const isdev = process.env.NODE_ENV === 'development'
 
 // 动态获取共享域信息
 export async function loadMain() {
@@ -12,6 +12,13 @@ export async function loadMain() {
     const Module = factory();
     console.log(Module)
     return Module;
+}
+
+// 开发环境远程引入共享js
+export async function devLoadMain() {
+    const result = await
+    import ("mainSdk/commont")
+    return result
 }
 
 export function structureApp(exposes, routes) {
