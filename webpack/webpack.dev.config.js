@@ -6,7 +6,7 @@ const { ModuleFederationPlugin } = require('webpack').container
 const mockApis = require('./utils/mockApiConfig').mockApis
 const { merge } = require('webpack-merge')
 const devServerConfig = {
-    contentBase: '../dist',
+    contentBase: path.resolve(__dirname, '../dist'),
     hot: true,
     host: 'localhost',
     before: mockApis
@@ -25,7 +25,12 @@ const devConfig = merge(baseConfig, {
         //     shared: {
         //         vue: {
         //             singleton: true
-        //         }
+        //         },
+        //         // lodash: {
+        //         //     singleton: true,
+        //         //     shareKey: 'vue',
+        //         //     shareScope: 'default'
+        //         // }
         //     }
         // })
     ]

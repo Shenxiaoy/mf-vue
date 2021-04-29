@@ -20,6 +20,9 @@ module.exports = {
         path: path.resolve(__dirname, '../dist'),
         filename: isDeveopment ? 'app.js' : 'ert.[hash:8].huskar.js'
     },
+    performance: {
+        hints: false
+    },
     module: {
         rules: [
             // {
@@ -91,17 +94,15 @@ module.exports = {
             name: 'bsadmin',
             library: { type: 'var', name: 'bsadmin' },
             exposes: {
-                './commont': path.resolve(__dirname, './config/exposes.js')
+                './commont': path.resolve(__dirname, './config/exposes.js') // 此处配置exposes导致出现热更新问题，目测是webpack5兼容问题
             },
             shared: {
                 vue: {
                     singleton: true
                 },
-                // lodash: {
-                //     singleton: true,
-                //     shareKey: 'vue',
-                //     shareScope: 'default'
-                // }
+                lodash: {
+                    singleton: true
+                }
             }
         })
     ],

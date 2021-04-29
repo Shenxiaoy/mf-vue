@@ -1,20 +1,28 @@
 import Vue from 'vue'
-// import Home from '../views/home'
+import Layout from '../components/layout'
 import System from '../views/system'
 
 export const routes = [{
         path: '/',
+        component: Layout,
+        name: 'layout',
         redirect: '/system',
-        name: 'home'
+        meta: {
+            title: '首页'
+        },
+        children: [{
+            path: '/system',
+            component: System,
+            meta: {
+                title: '系统'
+            }
+        }]
     },
-    // {
-    //     path: '/home',
-    //     component: Home,
-    //     name: 'home'
-    // },
     {
-        path: '/system',
+        path: '/system1',
         component: System,
-        name: 'system'
+        meta: {
+            title: '系统1'
+        }
     }
 ]
