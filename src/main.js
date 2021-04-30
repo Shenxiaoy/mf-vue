@@ -5,7 +5,6 @@ import routes from './router'
 import { loadMain, structureApp, isdev, devLoadMain } from './utils/mfInit'
 
 (async function() {
-    // devLoadMain()
     const mainSdk = isdev ? await devLoadMain() : await loadMain()
     const moduleContent = mainSdk.default
     structureApp(moduleContent, routes)
