@@ -58,7 +58,6 @@ export default {
   computed: {
     menuItems() {
       let menu = [];
-      console.log(this.$router.getRoutes(),this.$store.state.menus,'1111111')
       const curRoutes = this.$router.getRoutes()
       menu = filterRoutes(curRoutes)
       // if (this.$store) {

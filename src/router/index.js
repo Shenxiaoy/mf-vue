@@ -19,7 +19,6 @@ export const router = new VueRouter({
 })
 export function dynamicMenu() {
     const router = window.mainRouter
-    console.log(router.getRoutes(), 'routersss')
     store.dispatch('setMenus', router.getRoutes()).then(() => {})
 }
 Vue.use(VueRouter)
