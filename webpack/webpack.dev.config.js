@@ -41,6 +41,6 @@ WebpackDevServer.addDevServerEntrypoints(devConfig, devServerConfig)
 
 const compiler = webpack(devConfig)
 const server = new WebpackDevServer(compiler, devServerConfig)
-server.listen(8082, function() {
-    console.log('browser open in http://www.localhost:8082')
+server.listen(8081, function() {
+    console.log('browser open in http://www.localhost:8081')
 })

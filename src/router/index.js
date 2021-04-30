@@ -7,11 +7,11 @@ let routes = [
     //       redirect: '/order'
     //   },
     {
-        path: '/shop',
+        path: '/order',
         component: order,
-        name: '商品',
+        name: 'order',
         meta: {
-            title: '商品'
+            title: '订单'
         }
     }
 ]

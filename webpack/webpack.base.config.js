@@ -18,7 +18,7 @@ module.exports = {
         path: path.resolve(__dirname, '../dist'),
         filename: isDeveopment ? 'app.js' : 'ert[hash:8].app.js',
         library: {
-            name: 'webpackchild2',
+            name: 'webpackchild134',
             type: 'umd'
         }
     },
